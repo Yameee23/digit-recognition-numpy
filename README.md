@@ -2,7 +2,7 @@
  
 ## Objectif
  
-Pendant ce projet, mon objectif n'était pas d'obtenir la meilleure précision possible (un framework y arriverait en quelques lignes et en mieux) mais de comprendre les mécanismes d'un réseau de neurones en les implémentant moi-même.
+Mon objectif durant ce Projet n'était pas d'obtenir la meilleure précision possible (un framework y arriverait en quelques lignes et en mieux) mais de comprendre les mécanismes d'un réseau de neurones en les implémentant moi-même.
 J'ai donc implémenté :
 - forward pass (produits matriciels, biais)
 - fonctions d'activation : ReLU et softmax
