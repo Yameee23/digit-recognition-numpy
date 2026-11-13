@@ -18,13 +18,15 @@ https://www.kaggle.com/competitions/digit-recognizer/data
 Pour utiliser mon code il faut télécharger `train.csv` (42 000 images, 28×28) et le placer à la racine du projet.
  
 ## Les deux versions
+
+j'ai donc testé avec 1000 iterations
  
 | | 1 couche | 2 couches |
 |---|---|---|
 | Architecture | 784 → 10 (softmax) | 784 → 64 (ReLU) → 10 (softmax) |
 | Paramètres | 7 850 | 50 890 |
-| Itérations | 100 | 500 |
-| Précision | à compléter | 92,29 % |
+| Itérations | 1000|1000 |
+| Précision | 90.62% | 92,29 % |
  
 La version à 1 couche est en réalité une **régression softmax** : sans couche cachée, elle ne peut apprendre que des frontières linéaires entre les classes. L'ajout d'une couche cachée de 64 neurones avec ReLU permet au modèle de combiner des motifs intermédiaires avant de décider, ce qui explique le gain de précision.
  
