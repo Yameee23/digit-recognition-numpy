@@ -3,11 +3,11 @@
 ## Objectif
  
 Pendant ce projet, mon objectif n'était pas d'obtenir la meilleure précision possible (un framework y arriverait en quelques lignes et en mieux) mais de comprendre les mécanismes d'un réseau de neurones en les implémentant moi-même.
-J'ai donc utilisé :
+J'ai donc implémenté :
 - forward pass (produits matriciels, biais)
 - fonctions d'activation : ReLU et softmax
 - fonction de coût : cross-entropy
-- **backpropagation** : calcul des gradients couche par couche
+- backpropagation : calcul des gradients couche par couche
 - descente de gradient et mise à jour des poids.
  
 ## Dataset
@@ -28,7 +28,7 @@ j'ai donc testé avec 1000 iterations
 | Itérations | 1000|1000 |
 | Précision | 90.62% | 92,29 % |
  
-La version à 1 couche est en réalité une **régression softmax** : sans couche cachée, elle ne peut apprendre que des frontières linéaires entre les classes. L'ajout d'une couche cachée de 64 neurones avec ReLU permet au modèle de combiner des motifs intermédiaires avant de décider, ce qui explique le gain de précision.
+La version à 1 couche est en réalité une régression softmax : sans couche cachée, elle ne peut apprendre que des frontières linéaires entre les classes. L'ajout d'une couche cachée de 64 neurones avec ReLU permet au modèle de combiner des motifs intermédiaires avant de décider, ce qui explique le gain de précision.
  
 ## Installation
 
@@ -71,7 +71,7 @@ test_reseau_2couche.py    # inférence à partir des poids sauvegardés
  
 ## Limites et améliorations prévues
  
-- **La précision est mesurée sur les données d'entraînement.** Un split train/test est nécessaire pour évaluer la capacité réelle de généralisation — le chiffre sur des images jamais vues sera plus bas.
+- La précision est mesurée sur les données d'entraînement. Un split train/test est nécessaire pour évaluer la capacité réelle de généralisation ,de plus le chiffre sur des images jamais vues sera plus bas.
 - Le biais de la couche de sortie était initialement mal calculé (`np.sum` sans `axis`), ce qui donnait une seule correction appliquée aux 10 classes. Corrigé.
 - Pistes : augmenter le nombre de neurones cachés, tester d'autres valeurs de learning rate, ajouter une seconde couche cachée.
  
